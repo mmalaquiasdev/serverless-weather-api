@@ -24,12 +24,8 @@
     "ora": "^3.0.0"
   },
   "scripts": {
-    "test": "jest tests/",
-    "test:coverage": "jest --env=jsdom --coverage tests/",
-    "test:memory": "jest --env=node --logHeapUsage tests/"
-  },
-  "jest": {
-    "verbose": true,
-    "testURL": "http://localhost/"
+    "test": "jest",
+    "test:coverage": "jest --env=node --coverage",
+    "test:memory": "jest --env=node --logHeapUsage"
   }
 }

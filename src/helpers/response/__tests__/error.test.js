@@ -1,4 +1,4 @@
-const responseError = require('../../../src/helpers/response/error');
+const responseError = require('../error');
 
 test('Should create a error response with 500 status code', () => {
   const requestId = 'offline_awsRequestId_45168256350838387';
