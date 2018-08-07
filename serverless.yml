@@ -14,4 +14,9 @@ functions:
       - http:
           path: about
           method: get
-
+  weather:
+    handler: handler.weather
+    events:
+      - http:
+          path: weather
+          method: get

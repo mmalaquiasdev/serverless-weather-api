@@ -1,5 +1,4 @@
 const createBodyResponse = (statusCode, data, requestId) => ({
-  statusCode,
   data,
   requestId,
 });
