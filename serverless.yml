@@ -8,5 +8,10 @@ provider:
   runtime: nodejs8.10
 
 functions:
-  hello:
-    handler: handler.hello
+  about:
+    handler: handler.about
+    events:
+      - http:
+          path: about
+          method: get
+
