@@ -1,12 +1,9 @@
+const { responseSucess } = require('./src/helpers/response');
 
 module.exports.about = (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
-  };
-
-  callback(null, response);
+  console.log('init about lambda');
+  console.log('responseSucess', responseSucess);
+  const sucess = responseSucess('Go Serverless v1.0! Your function executed successfully!', context.awsRequestId);
+  console.log('sucess', sucess);
+  callback(null, sucess);
 };
