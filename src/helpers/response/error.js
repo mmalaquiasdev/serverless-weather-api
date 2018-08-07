@@ -1,3 +1,5 @@
+const createResponseJSON = require('./responseJson');
+
 const createBodyResponse = (statusCode, requestId, message) => ({
   error: {
     code: `custom-${statusCode}`,
@@ -6,7 +8,7 @@ const createBodyResponse = (statusCode, requestId, message) => ({
   requestId,
 });
 
-const createErrorResponse = (error, requestId, createResponseJSON) => {
+const createErrorResponse = (error, requestId) => {
   console.error(error);
 
   const statusCode = error.statusCode || 500;
