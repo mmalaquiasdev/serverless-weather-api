@@ -1,0 +1,20 @@
+{
+  "name": "serverless-weather-api",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmalaquiasdev/serverless-weather-api.git"
+  },
+  "author": "Mateus Malaquias",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmalaquiasdev/serverless-weather-api/issues"
+  },
+  "homepage": "https://github.com/mmalaquiasdev/serverless-weather-api#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
