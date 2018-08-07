@@ -1,14 +1,12 @@
 const { responseSucess, responseError } = require('./src/helpers/response');
 const { getWeather } = require('./src/service');
 
-module.exports.about = (event, context, callback) => {
+const about = (context) => {
   console.log('init about lambda');
-  const sucess = responseSucess('Go Serverless v1.0! Your function executed successfully!', context.awsRequestId);
-
-  callback(null, sucess);
+  return responseSucess('Go Serverless v1.0! Your function executed successfully!', context.awsRequestId);
 };
 
-module.exports.weather = async (event, context) => {
+const weather = async (event, context) => {
   console.log('init weather lambda');
   try {
     const result = await getWeather(event.queryStringParameters.city);
@@ -18,3 +16,5 @@ module.exports.weather = async (event, context) => {
     return responseError(error, context.awsRequestId);
   }
 };
+
+module.exports = { about, weather };

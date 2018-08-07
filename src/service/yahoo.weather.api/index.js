@@ -8,17 +8,20 @@ const createWeatherReqBody = param => ({
   },
 });
 
-const createWeatherResBody = result => ({
-  title: result.data.query.results.channel.item.title,
-  latitude: result.data.query.results.channel.item.lat,
-  longitude: result.data.query.results.channel.item.long,
-  lastUpdate: result.data.query.results.channel.item.pubDate,
-  temperature: {
-    code: result.data.query.results.channel.item.condition.temp,
-    text: result.data.query.results.channel.item.condition.text,
-    units: 'celsius',
-  },
-});
+const createWeatherResBody = (result) => {
+  const { channel } = result.data.query.results;
+  return {
+    title: channel.item.title,
+    latitude: channel.item.lat,
+    longitude: channel.item.long,
+    lastUpdate: channel.item.pubDate,
+    temperature: {
+      code: channel.item.condition.temp,
+      text: channel.item.condition.text,
+      units: 'celsius',
+    },
+  };
+};
 
 const getWeather = async (axios, param) => {
   const result = await axios(createWeatherReqBody(param));
