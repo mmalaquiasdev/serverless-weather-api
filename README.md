@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mmalaquiasdev/serverless-weather-api.svg?branch=master)](https://travis-ci.org/mmalaquiasdev/serverless-weather-api)
+
 # Serverless Weather API
 
 This is a basic project for demonstrating a fictitious serverless RESTful API.
