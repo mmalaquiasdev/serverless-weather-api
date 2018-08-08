@@ -24,7 +24,7 @@
     "ora": "^3.0.0"
   },
   "scripts": {
-    "test": "jest --env=node",
+    "test": "npm run lint && jest --env=node",
     "test:coverage": "jest --env=node --coverage",
     "test:memory": "jest --env=node --logHeapUsage",
     "lint": "eslint --ext .js src"
