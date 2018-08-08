@@ -1,6 +1,4 @@
 const createWeatherReqBody = param => ({
-  method: 'get',
-  url: 'https://query.yahooapis.com/v1/public/yql',
   params: {
     format: 'json',
     q: `select item from weather.forecast where woeid in
@@ -24,7 +22,7 @@ const createWeatherResBody = (result) => {
 };
 
 const getWeather = async (axios, param) => {
-  const result = await axios(createWeatherReqBody(param));
+  const result = await axios.get('https://query.yahooapis.com/v1/public/yql', createWeatherReqBody(param));
   return createWeatherResBody(result);
 };
 
