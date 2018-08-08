@@ -1,3 +1,5 @@
+/* eslint no-console: "off" */
+
 const createResponseJSON = require('./responseJson');
 
 const createBodyResponse = (statusCode, requestId, message) => ({

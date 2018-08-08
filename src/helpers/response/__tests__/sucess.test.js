@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const createSuccessResponse = require('../sucess');
 
 const requestId = 'offline_awsRequestId_45168256350838387';

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const mockAxios = require('axios');
 const getWeather = require('../index');
 

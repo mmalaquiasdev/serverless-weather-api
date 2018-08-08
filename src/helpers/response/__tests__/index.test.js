@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const { responseSucess, responseError } = require('../index');
 
 const requestId = 'offline_awsRequestId_45168256350838387';

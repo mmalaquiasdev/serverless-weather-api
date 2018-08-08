@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const createResponseJSON = require('../responseJson');
 
 test('Shloud create a json object with statusCode, header values and a body with some data', () => {

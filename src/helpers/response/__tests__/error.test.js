@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const responseError = require('../error');
 
 test('Should create a error response with 500 status code', () => {

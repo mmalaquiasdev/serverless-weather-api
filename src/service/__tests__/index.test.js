@@ -1,5 +1,6 @@
-const service = require('../index');
+/* eslint-disable */
 
+const service = require('../index');
 
 test('Should return a service obj contain the getWeather function', async () => {
   const res = await service.getWeather('São Paulo');
