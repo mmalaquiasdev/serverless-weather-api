@@ -6,8 +6,8 @@ const createWeatherReqBody = param => ({
   },
 });
 
-const createWeatherResBody = (result) => {
-  const { channel } = result.data.query.results;
+const createWeatherResBody = (data) => {
+  const { channel } = data.query.results;
   return {
     title: channel.item.title,
     latitude: channel.item.lat,
@@ -23,7 +23,7 @@ const createWeatherResBody = (result) => {
 
 const getWeather = async (axios, param) => {
   const result = await axios.get('https://query.yahooapis.com/v1/public/yql', createWeatherReqBody(param));
-  return createWeatherResBody(result);
+  return createWeatherResBody(result.data);
 };
 
 module.exports = getWeather;
