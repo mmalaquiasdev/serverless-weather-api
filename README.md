@@ -27,13 +27,7 @@ $ npm run test:memory
 ### Coding style tests
 
 ```
-// TODO
-```
-
-### Coding style format
-
-```sh
-// TODO
+$ npm run lint
 ```
 
 ## License
