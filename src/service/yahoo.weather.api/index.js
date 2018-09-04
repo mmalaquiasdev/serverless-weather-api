@@ -5,20 +5,21 @@ const createWeatherReqBody = param => ({
         (select woeid from geo.places(1) where text="${param}") and u='c'`,
   },
 });
+const createWeatherObj = channel => ({
+  title: channel.item.title,
+  latitude: channel.item.lat,
+  longitude: channel.item.long,
+  lastUpdate: channel.item.pubDate,
+  temperature: {
+    code: channel.item.condition.temp,
+    text: channel.item.condition.text,
+    units: 'celsius',
+  },
+});
 
 const createWeatherResBody = (data) => {
   const { channel } = data.query.results;
-  return {
-    title: channel.item.title,
-    latitude: channel.item.lat,
-    longitude: channel.item.long,
-    lastUpdate: channel.item.pubDate,
-    temperature: {
-      code: channel.item.condition.temp,
-      text: channel.item.condition.text,
-      units: 'celsius',
-    },
-  };
+  return createWeatherObj(channel);
 };
 
 const getWeather = async (axios, param) => {
